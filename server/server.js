@@ -11,8 +11,10 @@ const schema = require('./schema/schema');
 // Create a new Express application
 const app = express();
 
+require('dotenv').config()
+
 // Replace with your mongoLab URI
-const MONGO_URI = '';
+const MONGO_URI = process.env.MONGO_URI;
 
 // Mongoose's built in promise library is deprecated, replace it with ES2015 Promise
 mongoose.Promise = global.Promise;
